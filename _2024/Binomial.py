@@ -147,6 +147,10 @@ class BinomialTheorem(Scene):
 class Thumbnail(Scene):
     def construct(self):
         bino = MathTex("(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^k b^{n-k}").set_width(config.frame_width - 2)
+        bino[0][1].set_color(YELLOW)
+        bino[0][3].set_color(BLUE)
+        bino[0][16].set_color(YELLOW)
+        bino[0][18].set_color(BLUE)
         bino_sur = SurroundingRectangle(bino,color="#8D70C7",buff=0.2)
         tex = Tex("Proving: Binomial Theorem").shift(3*UP).scale(1.62)
         self.add(bino, bino_sur, tex)
