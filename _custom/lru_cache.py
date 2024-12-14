@@ -2,7 +2,7 @@ from functools import lru_cache, cache
 
 @lru_cache
 def fib(n: int) -> int:
-    #
+    # If the value of n is equal to or less than 1 then it will return 1
     if n<=1:
         return n
     else:
